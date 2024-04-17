@@ -17,7 +17,7 @@ export const SocketContextProvider = ({ children }) => {
     // create connection when there is an authenticated user
     if (authUser) {
       // pass the backend url
-      const socket = io("https://whatsapp-clone-chat-app.netlify.app", {
+      const socket = io("http://localhost:5000/", {
         query: {
           userId: authUser._id,
         },

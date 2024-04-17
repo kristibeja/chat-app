@@ -34,12 +34,22 @@ To run the frontend project locally, go to `./frontend` folder and run:
 ```bash
   npm run dev
 ```
+
+To build the project, in the root folder run:
+
+```bash
+  npm run build
+```
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file in the root folder.
 
-`PORT=''`
+`PORT=`
 
-`MONGO_DB_URI=''`
+`MONGO_DB_URI=`
 
-`NODE_ENV=''`
+`JWT_SECRET=`
+
+`NODE_ENV=`
+
+`LIVE_URL=`

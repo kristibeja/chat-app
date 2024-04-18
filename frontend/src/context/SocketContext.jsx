@@ -17,18 +17,11 @@ export const SocketContextProvider = ({ children }) => {
     // create connection when there is an authenticated user
     if (authUser) {
       // pass the backend url
-      const socket = io(
-        `${
-          process.env.NODE_ENV !== "development"
-            ? `${process.env.LIVE_URL}`
-            : "http://localhost:5000/"
-        }`,
-        {
-          query: {
-            userId: authUser._id,
-          },
-        }
-      );
+      const socket = io("https://chat-app-rduk.onrender.com", {
+        query: {
+          userId: authUser._id,
+        },
+      });
       setSocket(socket);
 
       // .on() listens to an event
